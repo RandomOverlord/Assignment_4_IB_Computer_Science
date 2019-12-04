@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="center" gridLinesVisible="true" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="400.0">
+         <children>
+            <TabPane layoutX="-1.0" prefHeight="419.0" prefWidth="415.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Dictionary">
+                  <content>
+                    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="400.0">
+                           <children>
+                              <Text layoutX="6.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Amazing Java Dictionary" textAlignment="CENTER" wrappingWidth="414.0">
+                                 <font>
+                                    <Font name="Century" size="28.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="input" layoutX="139.0" layoutY="71.0" onAction="#onEnter" promptText="Enter a word" />
+                              <Text layoutX="185.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Defenition:" />
+                              <Text fx:id="Definition" layoutX="113.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You haven't Entered a Word!" textAlignment="CENTER" wrappingWidth="201.8515625" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Nerd Stuff">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tbData" layoutX="2.0" layoutY="36.0" prefHeight="120.0" prefWidth="414.0">
+                                <columns>
+                                  <TableColumn fx:id="ID" prefWidth="75.0" text="Request ID" />
+                                  <TableColumn fx:id="Seq" prefWidth="170.0" text="Sequential Search" />
+                                    <TableColumn fx:id="Bin" prefWidth="171.0" text="Binary Search" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="tbData2" layoutX="1.0" layoutY="190.0" prefHeight="120.0" prefWidth="415.0">
+                                <columns>
+                                  <TableColumn fx:id="ID2" prefWidth="75.0" text="Request ID" />
+                                  <TableColumn fx:id="Seq2" prefWidth="170.0" text="Sequential Search" />
+                                    <TableColumn fx:id="Bin2" minWidth="0.0" prefWidth="171.0" text="Binary Search" />
+                                </columns>
+                              </TableView>
+                              <Text layoutX="2.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Comparisons Per Algorithm  " textAlignment="CENTER" wrappingWidth="414.0" />
+                              <Text layoutX="2.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Execute Time Per Algorithm  (In Nanoseconds)" textAlignment="CENTER" wrappingWidth="414.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
